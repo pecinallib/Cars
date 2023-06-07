@@ -9,6 +9,7 @@ import Image from '../Helper/Image';
 const PhotoContent = ({ data, single }) => {
   const user = React.useContext(UserContext);
   const { photo, comments } = data;
+
   return (
     <div className={`${styles.photo} ${single ? styles.single : ''}`}>
       <div className={styles.img}>
@@ -25,7 +26,7 @@ const PhotoContent = ({ data, single }) => {
             <span className={styles.visualizacoes}>{photo.acessos}</span>
           </p>
           <h1 className="title">
-            <Link to={`/photo/${photo.id}`}>{photo.title}</Link>
+            <Link to={`/foto/${photo.id}`}>{photo.title}</Link>
           </h1>
           <ul className={styles.attributes}>
             <li>{photo.peso} kg</li>
